@@ -32,6 +32,7 @@ typedef LONG_PTR *PLONG_PTR;
 typedef ULONG_PTR *PULONG_PTR;
 typedef HALF_PTR *PHALF_PTR;
 typedef UHALF_PTR *PUHALF_PTR;
+
 typedef LONG_PTR SSIZE_T, *PSSIZE_T;
 typedef ULONG_PTR DWORD_PTR, *PDWORD_PTR;
 typedef ULONG_PTR SIZE_T, *PSIZE_T;
@@ -70,12 +71,12 @@ typedef char CHAR, *PCHAR, *LPSTR, *PSTR;
 typedef const CHAR *PCSTR, *LPCSTR;
 typedef wchar_t WCHAR, *PWCHAR, *LPWSTR, *PWSTR;
 typedef const WCHAR *LPCWSTR, *PCWSTR;
+//#ifdef UNICODE
+typedef LPWSTR PTSTR, LPTSTR;
+typedef LPCWSTR PCTSTR, LPCTSTR;
 typedef WCHAR TCHAR, *PTCHAR;
 typedef WCHAR TBYTE, *PTBYTE;
-typedef LPCWSTR LPCTSTR;
-typedef LPWSTR LPTSTR;
-typedef LPCWSTR PCTSTR;
-typedef LPWSTR PTSTR;
+
 typedef struct _UNICODE_STRING {
   USHORT  Length;
   USHORT  MaximumLength;
